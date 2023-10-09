@@ -1,0 +1,105 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+
+}
+android {
+    namespace 'com.onlinetours'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.onlinetours"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    packagingOptions {
+        exclude 'META-INF/task_list_menu.kotlin_module'
+        exclude 'META-INF/DEPENDENCIES'
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+kapt {
+    generateStubs = true
+}
+ext {
+    timberVersion = "4.7.1"
+    ktx = "1.12.0"
+    appcompat = "1.6.1"
+    material = "1.9.0"
+    constraintlayout = "2.1.4"
+    lifecycle_version = "2.6.2"
+    sceleton = "4.0.0"
+    lifecycle_version = "2.6.2"
+    nav_version = "2.7.2"
+    cicerone = "7.1"
+    dagger = "2.24"
+
+}
+
+dependencies {
+
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+
+    //Core
+    implementation "androidx.core:core-ktx:$ktx"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    implementation "com.google.android.material:material:$material"
+    implementation("androidx.compose.runtime:runtime:1.5.1")
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
+
+    //dagger
+    annotationProcessor "com.google.dagger:dagger-compiler:$dagger"
+    kapt "com.google.dagger:dagger-compiler:$dagger"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$dagger"
+    kapt "com.google.dagger:dagger-android-processor:$dagger"
+
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
+    //Cicerone
+    implementation "com.github.terrakok:cicerone:$cicerone"
+}

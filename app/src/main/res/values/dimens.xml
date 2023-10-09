@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="spacer_large">20dp</dimen>
+    <dimen name="spacer_small">5dp</dimen>
+    <dimen name="halfPageMargin">8dp</dimen>
+    <dimen name="peekOffset">8dp</dimen>
+    <dimen name="_20sdp">20dp</dimen>
+    <dimen name="_35sdp">35dp</dimen>
+    <dimen name="bottom_height">56dp</dimen>
+</resources>

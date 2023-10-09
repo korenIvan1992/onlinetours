@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Online tours</string>
+    <string name="search">Поиск</string>
+    <string name="favorites">Избранное</string>
+    <string name="settings">Настройки</string>
+    <string name="call">Помощь</string>
+    <string name="help">help</string>
+    <string name="settings_fr">settings</string>
+    <string name="ok">Ок</string>
+    <string name="vehicles">Vehicles</string>
+    <string name="planets">Planets</string>
+    <string name="error_size">Для поиска необходимо ввести два знака</string>
+    <string name="error_no_work">Поиск по планетам не реализован</string>
+    <string name="type_search">Тип поиска:</string>
+    <string name="searсh_tours">Поиск туров</string>
+    <string name="from">Откуда</string>
+    <string name="to">Куда</string>
+    <string name="search_tour">Найти тур</string>
+    <string name="error_list_empty">Ошибка - список не загружен</string>
+    <string name="empty_data">Отсутствуют данные для заполнения</string>
+    <string name="empty_data_">Заполните данные</string>
+    <string name="no_tours">Не найден тур с такими параметрами</string>
+    <string name="from_">от</string>
+    <string name="operator">оператор:</string>
+</resources>
